@@ -1,0 +1,93 @@
+@media (max-width: 1200px) {
+    .promo .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .consultation .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }  
+}
+@media (max-width: 991px) {
+    .promo {
+        h1 {
+            font-size: 36px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+        .header__logo {
+            width: 160px;
+        }
+        .header__official {
+            font-size: 10px;
+            span {
+                font-size: 15px;
+            }
+        }
+        .header__contacts {
+            a {
+                font-size: 15px;
+            }
+            
+        }
+        .button {
+            width: 120px;
+            font-size: 10px;
+            &_main {
+                width: 200px;
+                height: 44px;
+                font-size: 12px;
+            }
+        }
+        div .promo__link {
+            font-size: 12px;
+            a {
+                font-size: 12px;
+            }
+        }
+        
+
+    }
+    .advantages {
+        .container{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+
+}
+@media (max-width: 767px) {
+    .promo {
+        h1 {
+            font-size: 28px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        .header__logo {
+            width: 140px;
+        }
+        .header__official {
+            font-size: 8px;
+            span {
+                font-size: 13px;
+            }
+        }
+        .header__contacts {
+            a {
+                font-size: 13px;
+            }
+            
+        }
+    }
+    .promo .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .advantages {
+        &__wrapper {
+            flex-direction: column;
+        }
+    }
+}
