@@ -2,9 +2,8 @@
     padding: 81px 0;
     &__inner {
         position: relative;
-        width: 750px;
+        max-width: 750px;
         margin: 0 auto;
-        
     }
     .slick-dots {
         display: flex;
@@ -32,4 +31,8 @@
         right: -66px;
         left: auto;
     }
+    .slick-dots {
+        bottom: unset;
+    }
+    
 }

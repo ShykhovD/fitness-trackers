@@ -40,9 +40,9 @@
     &__content {
         margin-top: 60px;
         display: none;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
-        &__active {
+        &_active {
             display: flex;
         }
     }
