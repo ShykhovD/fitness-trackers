@@ -74,5 +74,58 @@ $(document).ready(function(){
       $('.overlay, #order').fadeIn('slow');
     })
   });
+
+ //Validation
+
+  function validateForms(form) {
+    $(form).validate({
+      rules: {
+        name: {
+          required: true,
+        },
+        phone: "required",
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Пожалуйста введите ваше имя",
+          minlength: jQuery.validator.format("Введите миннумум {0} символа")
+        },
+        phone: "Укажите ваш номер телефона",
+        email: {
+          required: "Пожалуйста введите вашу почту",
+          email: "Адрес почты введен неправильно пример: name@domain.com"
+        }
+      }
+    });
+  };
+
+  validateForms('#order form');
+  validateForms('#consultation-form');
+  validateForms('#consultation form');
+
+  $('form').submit(function(e){
+    e.preventDefault();
+    if (!$(this).valid()){
+      return;
+    };
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function(){
+      $(this).find("input").val("");
+      $('#consultation, #order').fadeOut();
+      $('.overlay, #thanks').fadeIn('slow');
+
+      $('form').trigger('reset');
+    });
+    return false;
+
+  });
+
 });
 
