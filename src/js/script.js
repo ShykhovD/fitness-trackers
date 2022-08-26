@@ -127,5 +127,15 @@ $(document).ready(function(){
 
   });
 
+  // Smooth scroll, pageup
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1600) {
+      $('.pageup').fadeIn();
+    } else {
+      $('.pageup').fadeOut();
+    }
+  })
+
 });
 
